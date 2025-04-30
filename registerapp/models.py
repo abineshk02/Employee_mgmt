@@ -1,17 +1,15 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
-class Position(models.Model):
-    title = models.CharField(max_length=50)
-
-    def __str__(self) :
-        return self.title
+from django.db import models
+from django.utils import timezone
 
 class Employee(models.Model):
     fullname = models.CharField(max_length=100)
-    emp_id = models.CharField(max_length=5)
     mobile = models.CharField(max_length=10)
-    position = models.ForeignKey(Position,on_delete=models.CASCADE)
+    email = models.EmailField(default='default@example.com')
+    date_joined = models.DateField(default=timezone.now)
+    position = models.CharField(max_length=50)  # Now a plain text field inside Employee
 
-
-
+    def __str__(self):
+        return self.fullname
