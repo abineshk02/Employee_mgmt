@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'employee.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(
-        'postgresql://registerdb_3ilb_user:H4vAPJl1D2pokUZnhDzokxkk49w1wO3u@dpg-d094vjqdbo4c7395nikg-a/registerdb_3ilb',
+        'postgresql://registerdb_3ilb_user:H4vAPJl1D2pokUZnhDzokxkk49w1wO3u@dpg-d094vjqdbo4c7395nikg-a.oregon-postgres.render.com/registerdb_3ilb',
         conn_max_age=600,
         ssl_require=True
     )
