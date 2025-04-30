@@ -1,0 +1,54 @@
+{% extends 'registerapp/base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center bg-light shadow">
+    <h1 class="display-4 text-dark">Welcome to the Employee Management System</h1>
+    <p class="lead text-muted">Easily manage your workforce with efficiency and transparency.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg shadow" href="{% url 'employee_insert' %}" role="button">
+        <i class="fas fa-user-plus"></i> Add New Employee
+    </a>
+    <a class="btn btn-outline-primary btn-lg ml-2 shadow" href="{% url 'employee_list' %}" role="button">
+        <i class="fas fa-users"></i> View Employee List
+    </a>
+</div>
+
+
+<div class="row text-center mb-5">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <i class="fas fa-user-check fa-3x mb-3 text-secondary"></i>
+                <h5 class="card-title">Track Employees</h5>
+                <p class="card-text">Keep a clear record of all employee details including position and joining date.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <i class="fas fa-edit fa-3x mb-3 text-secondary"></i>
+                <h5 class="card-title">Easy Updates</h5>
+                <p class="card-text">Quickly update employee records with just a few clicks.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <i class="fas fa-trash-alt fa-3x mb-3 text-secondary"></i>
+                <h5 class="card-title">Delete Safely</h5>
+                <p class="card-text">Remove employees from the system securely and efficiently.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center mt-5">
+    <blockquote class="blockquote text-muted">
+        <p class="mb-0">"Take care of your employees, and they will take care of your business."</p>
+        <footer class="blockquote-footer">Richard Branson</footer>
+    </blockquote>
+</div>
+{% endblock %}
