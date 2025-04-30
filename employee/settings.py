@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -68,15 +69,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'employee.wsgi.application'
 
 # Database
+
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'registerdb',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-    }
+    'default': dj_database_url.parse(
+        'postgresql://registerdb_3ilb_user:H4vAPJl1D2pokUZnhDzokxkk49w1wO3u@dpg-d094vjqdbo4c7395nikg-a/registerdb_3ilb',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
