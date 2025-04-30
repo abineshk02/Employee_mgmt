@@ -23,7 +23,7 @@ SECRET_KEY = get_random_secret_key()
 DEBUG = True
 
 # Allowed hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://employee-mgmt-z366.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
